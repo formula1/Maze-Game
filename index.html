@@ -1,0 +1,140 @@
+<html>
+<head>
+  <title>Make a Game</title>
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.js"></script>
+  <script src="http://canjs.com/release/latest/can.jquery.js"></script>
+
+  <script src="lib/csmazes/lib/mersenne.js" type="text/javascript"></script>
+  <script src="lib/csmazes/lib/maze.js" type="text/javascript"></script>
+  <script src="game/first-contact.js" type="text/javascript"></script>
+
+  <script src="game/hud.js" type="text/javascript"></script>
+  <script src="game/scenes/main_menu.js" type="text/javascript"></script>
+  <script src="game/scenes/wl_scene.js" type="text/javascript"></script>
+  <script src="game/scenes/checking.js" type="text/javascript"></script>
+  <script src="game/scenes/game_scene.js" type="text/javascript"></script>
+	  <script src="game/logic/MazeContainer.js" type="text/javascript"></script>
+	  <script src="game/logic/Character.js" type="text/javascript"></script>
+	  <script src="game/logic/Fifo-Lifo.js" type="text/javascript"></script>
+  <script src="game/scenes/math_scene.js" type="text/javascript"></script>
+	  <script src="game/logic/MathProblems.js" type="text/javascript"></script>
+
+  <script src="lib/csmazes/lib/algorithms/hunt_and_kill.js" type="text/javascript"></script>
+  <style type="text/css">
+    * { font-family: sans-serif; }
+
+    h1 {
+      font-size: 24px;
+      margin: 20px;
+      margin-bottom: 10px;
+    }
+
+    p {
+      margin: 10px 20px;
+    }
+
+    small {
+      color: #777;
+      font-size: 11px;
+    }
+
+    input { width: 50%; }
+    body{text-align:center;}
+    body>*{margin-left:auto;margin-right:auto}
+    #game{position:relative;width:1024px;height:512px;}
+    #game>div{position:absolute;width:100%;height:100%;}
+
+    .HUD{
+		width:1024px;
+		height:32px;
+		margin:0px;
+		position:absolute;
+		bottom:0px;
+		text-align:center
+	}
+    .HUD>*{display:inline-block;}
+  </style>
+</head>
+<body>
+<div id="game"></div>
+<div style="display:none">
+	<div id="main_menu">
+		<div><div style="display:inline-block;width:472px;height:472px;vertical-align:top;background-color:#AAA;padding:20px;border-radius:10px;">
+			<p style="overflow:hidden;scroll:none;text-align:left;margin:0px;height:472px;width:472px;" class="story"></p>
+		</div><div style="display:inline-block;width:512px;height:512px;text-align:left;vertical-align:top" class="controls">
+		 Difficulty: <select class="difficulty">
+		  <option data-value="0">Easy</option>
+		  <option data-value="1">Medium</option>
+		  <option data-value="2">Hard</option>
+		</select><br />
+		<button><h1>Create a Game</h1></button>
+		<p>Don't be afraid to reset: Some puzzles are literally impossible</p>
+		<p>Avoid the Math Snags when Possible: They will waste time and time is money</p>
+		<h2>Collect all the balls and place them in the right order to win!</h2>
+		</div>
+		</div>
+	</div>
+	<div id="game_scene" >
+	    <canvas style="position:absolute;left:0px" width=992 height=480>
+		Your Browser doesn't support Canvas, PLEASE DOWNLOAD A NEW ONE! :)
+	    </canvas>
+	    <canvas style="position:absolute;left:0px" width=992 height=480></canvas>
+	    <canvas style="position:absolute;left:0px" width=992 height=480></canvas>
+		<div class="HUD"><!--
+			--><div class="money"></div><!--
+			--><div class="strikes"></div><!--
+			--><div class="fl_array"></div><!--
+		--></div>
+	</div>
+	<div id="math_scene" >
+		<h1>You've Hit a MATH SNAG!!</h1>
+		<p style="font-size:8px;width:512px;margin:5px auto;">Despite your best efforts to avoid math of all kinds. Your favorite planned feature uses intense multi variable calculus. If you want to continue making this game, you must solve this important equation. In all games, you will learn that not only will you sometimes run into math but that many of the best of things much better based off math. Learn to love it, because if you dont... Your in for a long, sad ride... Possibly involving 1000's of Permeutations......</p>
+		<p class="question" style="display:block;position:relative;">
+			<!-- The Question -->
+		</p>
+		<form class="answer" style="display:block;position:relative;margin:10px 20px;">
+			<!-- Your Answer -->
+		</form>
+		<div class="HUD"><!--
+			--><div class="money"></div><!--
+			--><div class="strikes"></div><!--
+			--><div class="fl_array"></div><!--
+		--></div>
+	</div>
+	<div id="checking_scene">
+		<h1>Please Wait. Checking "something".</h1>
+		<p style="font-size:8">Not Really. This is going to test your reaction time. The longer you wait after we finished "checking", the more money you lose ;)</p>
+	</div>
+	<div id="loss_scene" >
+		<h1>Yeah.. you messed up...</h1>
+		<p class="reason"></p>
+		<p>No one paid attention to your screw up because nobody cared anyway. People thought you were worthless before (If they even knew you existed) and you've done nothing to prove them wrong. However, part of the beauty of being invisible is that if you mess up, nobody notices. So you can try again without shame</p>
+		<button>Would you like to try to make a game again?</button>
+	</div>
+	<div id="win_scene" >
+		<h1>You Made a Game!!!!111!11111!!11!1!1</h1>
+		<p>Unfortunately, your game is terrible. Nobody plays it because after playing it, they avoided talking about it. And it wasn't because they hated you. It was because just thinking about your game made them gag a little bit. So essentially you can see it as you wasted your time and money.<p>
+		<p>However...</p>
+		<p>The truth is...</p>
+		<p>This is pracice. Every Game you make is practice. The successful ones and the failures. Everyones first is special. No question about that. But, just like in every field, the more you know and the more you get done, the better you will become.</p>
+		<p>And after all is said in done, don't worry about your successes and failures. Just realize you were practicing patience, mathematics, logic and understanding fun. You will get better. And if you don't, Read some damn articles about it and force yourself to. ;)</p>
+		<button>Make another Game?</button>
+	</div>
+</div>
+    <script type="text/javascript">
+	var $ = jQuery;
+	$(function(){
+		var game = new Game();
+		game.addScene("main_menu");
+	});
+//		Main_Menu:,
+//		Maze_Game:,
+//		Math_Game:,
+//		Pause_Menu:,
+//		Success:,
+//		Failure:,
+
+    </script>
+</body>
+</html>

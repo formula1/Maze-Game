@@ -1,0 +1,5 @@
+What makes a good maze?
+
+1) multiple intersections of sections (top left, top right, bottom left, bottom right)
+2) Misleading directions - Must go up inorder to go down
+

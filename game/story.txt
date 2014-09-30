@@ -1,0 +1,14 @@
+<h1>Story</h1>
+
+<p>
+<span style="font-family:courier;display:inline-block;vertical-align:top;color:#FF0;Font-size:40px;Font-weight:bold;">Y</span><span style="padding-top:10px;width:408px;display:inline-block;vertical-align:top;"><span style="Font-weight:bold;color:#FF0">ou</span> have just been given 1,000,000 dollars. With that million, you have decided to relax. <span style="font-weight:bold">Life can be hard</span> but you've been given a chance to <span style="font-style: italic;">live the way you want to</span>. Part of that happens to be to play many different video games. Role Playing Games, Collectable Card Games, Puzzle Games, Rouge-like games. Even some First Person shooters and Real Time Strategy games come into the mix. You get bored some times, and part of you wants to try creating a game. But for the most part you get to <span style="font-style:italic;">take life easy</span></span>
+</p>
+
+<p>
+<span style="font-family:courier;display:inline-block;vertical-align:top;color:#F00;Font-size:40px;Font-weight:bold;">B</span><span style="padding-top:10px;width:408px;display:inline-block;vertical-align:top;"><span style="Font-weight:bold;color:#F00">ut</span> then someone decided to <span style="color:FF0">piss</span> on your favorite past time. They know they can kick you around. You have become weak from lack of exercize and are not used to being challenged to this extent. Feeling superiour after making you feel small and hopeless. They leave a small taunt. But a taunt that burns you...</span>
+</p>
+<p>
+<span style="font-family:courier;display:inline-block;vertical-align:top;color:#00F;Font-size:40px;Font-weight:bold;">M</span><span style="padding-top:10px;width:408px;display:inline-block;vertical-align:top;"><span style="Font-weight:bold;color:#00F">ake</span> a video game. They say you can't do it. They say your worthless scum. They say that all people who enjoy and play them should be wrapped into a pit and burned. Where you used to just be content with relaxing, <span style="font-weight:bold;color:#F00">now you have the fire to prove them wrong</span>. Unfortunately, making a videogame isn't easy. You must go through the maze of documentation. Overcome all of the math snags. And eventually put the right peices in place in the right order to get a proper working game. Not only that, but your money isn't infinite. With each day you spend, it slowly goes down the drain. Paying rent each month. Buying food (but no gas because you'll be a hermit). <span style="font-style:italic;">The occasional party</span>. All leading up to eventually having nothing.</span>
+</p>
+
+<h1>Make your game.</h1>

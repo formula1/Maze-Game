@@ -1,0 +1,36 @@
+Game
+-So you like playing games huh?
+-TRY BUILDING ONE! MWAHAHAHAHAHAH!!!!!!!
+
+(Try to build one)
+-Creates maze
+-puts character inside
+
+If success
+	-Oh... you built one... Whatever, it sucks anyway....
+	-Failure..... as expected...... huehuehuehuehue
+
+Get through the maze
+-I need to be able to do movement within a grid
+-Restrict movement within the grid
+
+Unlock the mathematical equation
+- create temporary stops
+- Create UI that asks for a mathematical equation to be solved
+	-Given a Line equation and x value
+		-what is the y value?
+	-Given two points
+		-What is the slope of the line?
+		-Instead did X intercept and y intercept
+	-Given two line equations
+		-what is the intersection point?
+- Check the answer
+	-Correct-allow them to pass
+	-Failure-Give them a strike
+		-Three strikes, your out
+
+bring the lemmings to the correct location
+-Artificial intelligence, they reproduce
+-The avoid your smell
+-They follow cheese smell
+	-cheese smell 

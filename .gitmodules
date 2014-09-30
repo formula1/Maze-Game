@@ -1,0 +1,3 @@
+[submodule "lib/csmazes"]
+	path = lib/csmazes
+	url = https://github.com/jamis/csmazes.git
